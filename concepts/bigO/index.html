@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/images/uil.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles/styles.css">
+<link rel="stylesheet" href="/styles/atom-one-dark.min.css">
+<script src="/scripts/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+    <title>Guide</title>
+</head>
+<body>
+
+    <ul class="navbar">
+        <div class="title">
+            <li>
+                <a href="/">Home page</a>
+            </li>
+        </div>
+        <div>
+            <li><a href="/concepts">Concepts</a></li>
+        </div>
+    </ul>
+    <h1>Guide</h1>
+    <h2>Big O, difficulty <em>medium</em></h2>
+    <p>Before reading, it is necessary to watch this video: 
+        <div class="iframe-container">
+            <br><br><iframe width="560" height="315" src="https://www.youtube.com/embed/__vX2sjlpXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+        </div>
+    <br>Big O is basically a measure of an algorithim's complexity in terms of N. It has nothing to do with the hardware running the code. It can be looked at 
+    in worst-case, best-case, and average-case, but you'll only be needing to learn worst-case. Two things to note about Big O are:
+    <ul>
+        <li>Big O ignores constants. For instance, 5n is written as O(n)</li>
+        <li>Higher order terms take precedence over lower terms. The highest order term is the complexity of the code.
+            <ul>
+                <li>O(2ⁿ)</li>
+                <li>O(n²)</li>
+                <li>O(nlogn)</li>
+                <li>O(n)</li>
+                <li>O(logn)</li>
+                <li>O(1)</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Let's take a look at what these different terms mean.
+    O(1) means that the program has a constant time.
+    Take this code for example:<pre><code>int i = 3;
+System.out.println(i)</code></pre>
+No matter how big the int we print, or how many print statements we have, the input never changes the execution time. Therefore, it is O(1).
+
+    </p>
+<br><br> </p>
+</body>
+</html>
