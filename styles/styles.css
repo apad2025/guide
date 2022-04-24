@@ -2,7 +2,6 @@
     background: #1d2a35;
     font-family: monaco,Consolas,Lucida Console,monospace;
     color: #cdcdcd;
-    box-sizing: border-box;
 }
 
 .navbar {
@@ -38,20 +37,24 @@
 }
 
 .navbar .title a {
-    
     background-color: #04aa6d;
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
-    border: 20px;
-    color: white;
-    padding: 15px 32px;
+    background: #0b860f; /* Green */
+    padding: 20px;
+    width: 150px;
+    margin: auto;
     text-align: center;
+}
+
+.button a {
+    font-size: 100%;
+    background: #0b860f;
+    font-weight: 700;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
+}
+
 button {
     text-align: center;
 }
@@ -90,7 +93,7 @@ body {
         width: 44%;
     }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .iframe-container {
         margin: auto;
         width: 100%;
@@ -99,5 +102,4 @@ body {
 
 .iframe-container iframe {
     width: 100%;
-
 }
