@@ -49,7 +49,10 @@ pre {
 .hljs-variable,
 .hljs-selector-tag,
 .hljs-deletion,
-.hljs-subst {
+.hljs-subst,
+.hljs-class,
+.hljs-attr,
+.hljs-variable {
   background: #15202b;
   color: #e06c75;
 }
@@ -63,37 +66,12 @@ pre {
   color: #98c379;
 }
 
-.hljs-operator {
-  background: #15202b;
-  color: #61aeee;
-}
 
-.hljs-class {
-  color: #e06c75;
-  background: #15202b;
-}
-
-.hljs-method {
-  color: #61afef;
-  background: #15202b;
-}
-
-.hljs-object {
-  color: #e5c07b;
-  background: #15202b;
-}
-
-.hljs-start {
+.hljs-start,
+.hljs-args {
   color: #e06c75;
   background: #15202b;
   font-style: italic;
-}
-
-
-.hljs-attr,
-.hljs-variable {
-  color: #e06c75;
-  background: #15202b;
 }
 
 .hljs-selector-class,
@@ -105,12 +83,9 @@ pre {
   color: #d19a66;
 }
 
-.hljs-import {
-  color: #e5c07b;
-  background: #15202b;
-}
-
-.hljs-meta {
+.hljs-import,
+.hljs-meta,
+.hljs-object {
   color: #e5c07b;
   background: #15202b;
 }
@@ -118,17 +93,12 @@ pre {
 .hljs-symbol,
 .hljs-bullet,
 .hljs-link,
-
 .hljs-selector-id,
-.hljs-title {
+.hljs-title,
+.hljs-method,
+.hljs-operator {
   background: #15202b;
   color: #61aeee;
-}
-
-.hljs-args {
-  background: #15202b;
-  color: #e06c75;
-  font-style: italic;
 }
 
 .hljs-built_in,
