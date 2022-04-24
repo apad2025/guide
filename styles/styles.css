@@ -4,50 +4,6 @@
     color: #cdcdcd;
 }
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: 20px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
-button {
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-}
-
-body {
-    margin: 0px;
-}
-
-.content {
-    margin: 50px;
-}
-
-.centerme {
-    margin: auto;
-    width: 50%;
-    padding: 30px;
-    text-align: center;
-}
-
-.centerme .mybutton {
-    cursor: pointer;
-    padding: 20px;
-    background: #0b860f;
-    background-color: #0b860f;
-    justify-content: center;
-    text-align: center;
-}
-
-
-
 .navbar {
     font-weight: normal;
     list-style-type: none;
@@ -83,4 +39,56 @@ body {
 .navbar .title a {
     
     background-color: #04aa6d;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+button {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    margin: 0px;
+}
+
+.content {
+    margin: 50px;
+    margin-bottom: 10px;
+}
+
+.centerme {
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+    text-align: center;
+}
+
+.centerme .mybutton {
+    cursor: pointer;
+    padding: 20px;
+    background: #0b860f;
+    background-color: #0b860f;
+    justify-content: center;
+    text-align: center;
+}
+
+.iframe-container {
+    margin: auto;
+    width: 44%;
+}
+.iframe-container iframe {
+    width: 100%;
+
 }
