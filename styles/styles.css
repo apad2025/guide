@@ -2,6 +2,7 @@
     background: #1d2a35;
     font-family: monaco,Consolas,Lucida Console,monospace;
     color: #cdcdcd;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -64,7 +65,7 @@ body {
 }
 
 .content {
-    margin: 50px;
+    margin: 30px;
     margin-bottom: 10px;
 }
 
@@ -84,10 +85,18 @@ body {
     text-align: center;
 }
 
-.iframe-container {
-    margin: auto;
-    width: 44%;
+    .iframe-container {
+        margin: auto;
+        width: 44%;
+    }
+
+@media only screen and (max-width: 600px) {
+    .iframe-container {
+        margin: auto;
+        width: 100%;
+    }
 }
+
 .iframe-container iframe {
     width: 100%;
 
