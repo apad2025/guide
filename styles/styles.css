@@ -103,3 +103,8 @@ body {
 .iframe-container iframe {
     width: 100%;
 }
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
