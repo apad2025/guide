@@ -144,7 +144,7 @@ body {
         margin: auto;
         width: 100%;
     }
-    .sidenav {
+    .sidebar {
         display: none;
     }
     .content {
@@ -162,4 +162,37 @@ body {
 .responsive {
     width: 100%;
     height: auto;
+}
+
+.sidebar {
+    margin: 0;
+    float: left;
+    background: #15202b;
+    width: 15%;
+    height: 100%;
+    padding: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    background-color: #15202b;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.sidebar * {
+    background: #464646;
+    /*list-style: none;*/
+    text-decoration: none;
 }
