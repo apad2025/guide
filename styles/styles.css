@@ -109,6 +109,9 @@ body {
 
 .iframe-container iframe {
     width: 100%;
+    border-style:ridge;
+    border-color: #04aa6d;
+    border-width: 20px;
 }
 
 .responsive {
