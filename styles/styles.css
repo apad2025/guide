@@ -139,9 +139,15 @@ body {
         width: 44%;
     }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .iframe-container {
         margin: auto;
+        width: 100%;
+    }
+    .sidenav {
+        display: none;
+    }
+    .content {
         width: 100%;
     }
 }
