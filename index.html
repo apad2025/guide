@@ -9,12 +9,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles/styles.css">
-<link rel="stylesheet" href="/styles/atom-one-dark.min.css">
-<script src="/scripts/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-    <title>Big O Notation</title>
+    <title>Compsci Guide</title>
 </head>
 <body>
+    <div class="cookie-banner" style="display: none">
+        <p>
+            By using our website, you agree to our 
+            <a href="insert-link">cookie policy</a>
+          </p>
+        <button class="close">&times;</button>
+        </div>
     <div class="body">
         <ul class="navbar">
             <div class="title">
@@ -27,176 +31,11 @@
             </div>
         </ul>
     
-        <div class="sidebar">
-            <a class="active" href="#title">Big O Notation</a>
-            <a href="#video">Video</a>
-            <a href="#explanation">Explanation</a>
-            <a href="#O(1)">O(1)</a>
-            <a href="#O(logn)">O(logn)</a>
-            <a href="#O(n)">O(n)</a>
-            <a href="#O(nlogn)">O(nlogn)</a>
-            <a href="#O(n^x)">O(nˣ)</a>
-            <a href="#practice">Practice</a>
-        </div>
-        
-        <div class="content">
-            <h1 id="title">Big O Notation</h1>
-            <h2>Difficulty <em>medium</em></h2>
-            <p>Before reading, it is necessary to watch this video: 
-                <div class="iframe-container">
-                    <br><br><iframe width="560" height="315" id="video" src="https://www.youtube.com/embed/__vX2sjlpXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
-                </div>
-            <br><p id="explanation">Big O is basically a measure of an algorithim's complexity in terms of N. It has nothing to do with the hardware running the code. It can be looked at 
-            in worst-case, best-case, and average-case, but you'll only be needing to learn worst-case. Two things to note about Big O are:</p>
-            <ul>
-                <li>Big O ignores constants. For instance, 5n is written as O(n)</li>
-                <li>Higher order terms take precedence over lower terms. The highest order term is the complexity of the code.
-                    <ul>
-                        <li>O(n!)</li>
-                        <li>O(2ⁿ)</li>
-                        <li>O(nˣ)</li>
-                        <li>O(nlogn)</li>
-                        <li>O(n)</li>
-                        <li>O(logn)</li>
-                        <li>O(1)</li>
-                    </ul>
-                </li>
-            </ul>
+    
 
-            <p>Let's take a look at what these different terms mean.</p>
-            <br>
-
-            <h2 id="O(1)">O(1)</h2>
-
-            <p>O(1), or constant complexity, means that the program has a constant time regardless of the data set size. They are efficient with any data set.
-            Take this code for example:</p>
-
-            <pre><code>int i = 3;
-System.out.println(i);</code></pre>
-
-            <p>No matter how big the int we print, or how many print statements we have, the input never changes the execution time. Therefore, it is O(1).</p>
-            
-            <br>
-            
-            <h2 id="O(logn)">O(logn)</h2>
-
-            <p>O(logn), or logarithmic complexity, means that the amount of data an algorithm has is halved each time it runs, or passes. They are efficient with large data sets.
-            This can be very easily visualized with a binary search tree.</p>
-
-            <img src="/images/binary search tree.png" alt="Image of a binary search tree" class="responsive">
-
-            <p>Each time you branch off from one number to another and proceed down the tree, you are halving your data set. Binary search trees are not the only
-            algorithms with logn complexities. Another example, shockingly, is a logarithm.
-            <br>In order to this next example, we must first understand what a log is. A log is the exponent
-            or power to which another number needs to be raised to yield a certain number. In computer science, it is assumed that the base of a log is 2, so 
-            let's say we need to find x when log₂8=x. This problem is asking for the exponent that needs to be applied on 2 to equal 8 
-            which can be rewritten as 2ˣ=8. With this in mind, let's take a look at this code:</p>
-
-            <pre><code>import static java.lang.System.*;
-public class test{
-    public static void main (String[] args){
-        double n = 8.0;
-        out.println(log(n));
-    }
-    public static double log(double n){
-        if(n == 0){
-            return n;
-        } 
-        n=Math.floor(n/2);
-        return log(n);
-    }
-}</code></pre>
-            <p>In the program, the main method asks to print out log(8). The method first checks to see if the input is equal to 0 and simply returns 0 if it is.
-            If it isn't, it divides n by 2, and then rounds it down to avoid dealing with decimals. Finally, it calls itself again in what is known as a recursion
-            and the process is repeated until 0 is reached. Notice that this program runs 3 times before returning 0 which is the answer to the problem we discussed earlier.
-            This code also has a complexity of O(logn) because the data set is halved every pass.
-            </p>
-            <br>
-
-            <h2 id="O(n)">O(n)</h2>
-
-            <p>O(n), or linear complexity, means that the complexity of your code is directly proportional to the size of your input. Take this code for example:</p>
-            
-            <pre><code>import static java.lang.System.*;
-public class test {
-    public static void main (String[] args){
-        int[] array = new int[10];
-        for(int i = 0; i&ltarray.length; i++){
-            array[i] = i;
-        }
-        for(int i = 0; i&ltarray.length; i++){
-            out.println(array[i]);
-        }
-    }
-}
-</code></pre>
-
-            <p>This code takes an array of length 10, sets every number as its index, then prints out the numbers individually. Notice that the amount
-                of times the loops run is directly controlled by the length of the array, therefore giving this code a complexity of O(n).
-            </p>
-            <br>
-
-            <h2 id="O(nlogn)">O(nlogn)</h2>
-
-            <p>O(nlogn), or loglinear complexity, means that your program has logn complexity n times. Notice how the word loglinear is just log and linear put together. This is because
-                O(nlogn) is essentially the blending of O(n) and O(logn). Let's take a look
-                at some code:
-            </p>
-            
-            <pre><code>import static java.lang.System.*;
-public class test {
-    public static void main (String[] args){
-        double n = 4, y = n;
-        while(n>1){ //complexity of this loop is O(logn)
-            n = Math.floor(n/2);
-            for(int i = 1; i<=y; i++){ //complexity of this loop is O(n)
-                out.println(i);
-            }
-        }
-    }
-}
-</code></pre>
-
-            <p>In this program, you can see that the outer loop is O(logn) because the outer loop halves the data set upon every iteration. The
-                inner loop is O(n) because the for loop is directly dependent on the input size of y. You might be wondering, why isn't this code
-                just O(n)? After all, you said earlier that in Big O we take the highest order term. While this is true, it isn't always the case.
-                The reason why this program is an exception to that rule is because the inner for loop is nested inside of the while loop. When
-                we have nested loops, we multiply both of the loops' complexities. If the
-                for loop was separate from the while loop, you would choose O(n) because it is the highest order term. Since the for loop can only
-                run as many times as the while loop, you have to combine them. This leads to the program having a complexity of O(nlogn).
-            </p>
-            <br>
-
-            <h2 id="O(n^x)">O(nˣ)</h2>
-
-            <p>O(nˣ), or polynomial complexity, means that your code will run through all of n for every n x number of times.
-                X represents the number of times all of n will be processed for every n. Take this code for example:
-            </p>
-
-            <pre><code>import static java.lang.System.*;
-public class test {
-    public static void main (String[] args){
-        int n = 5;
-        int count = 0;
-        for(int i = 0; i&ltn; i++){ //complexity is O(n)
-            for(int j = 0; j&ltn; j++){ //complexity is also O(n)
-                out.println(++count);
-            }
-        }
-    }
-}
-</code></pre>
-
-            <p>Both for loops have complexities of O(n). However, as we previously stated, nested for loops mean that you have to multiply the terms,
-                rather than take the highest order term. This means this program has a complexity of O(n²), which is really O(nˣ) since we drop constants.
-            </p>
-
-            <div class="iframe-container" id="practice">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzDT_b_bmFDMFfrelPeW1j47FKoprXbi07UpjdZq6s1KrFzw/viewform?embedded=true" width="640" height="360" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
-        </div>
+    
+        <h1>Welcome to the Computer Science UIL Guide</h1>
+        <div class="centerme"><a href="/concepts/" class="button">Get started</a></div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
 </body>
 </html>
