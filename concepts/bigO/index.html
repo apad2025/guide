@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/images/uil.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="/styles/atom-one-dark.min.css">
 <script src="/scripts/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
@@ -16,31 +16,42 @@
 </head>
 <body>
     <div class="body">
-        <ul class="navbar">
-            <div class="title">
-                <li>
-                    <a href="/">Home</a>
-                </li>
+        
+        <nav class="navbar has-shadow is-white">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="/images/uil.ico" alt="UIL logo" style="max-height: 70px" class="py-2 px-2">
+                </a>
+                <a class="navbar-burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
             </div>
-            <div>
-                <li><a href="/concepts">Concepts</a></li>
+
+            <div class="navbar-menu" id="nav-links">
+                <div class="navbar-end">
+                    <a href="/concepts/" class="navbar-item">Concepts</a>
+                </div>
             </div>
-        </ul>
-    
-        <div class="sidebar">
-            <a class="active" href="#title">Big O Notation</a>
-            <a href="#video">Video</a>
-            <a href="#explanation">Explanation</a>
-            <a href="#O(1)">O(1)</a>
-            <a href="#O(logn)">O(logn)</a>
-            <a href="#O(n)">O(n)</a>
-            <a href="#O(nlogn)">O(nlogn)</a>
-            <a href="#O(n^x)">O(nˣ)</a>
-            <a href="#practice">Practice</a>
+        </nav>
+
+        
+        <div class="section pt-4 pb-0">
+            <nav class="breadcrumb">
+                <ul class="container">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/concepts/">Concepts</a></li>
+                    <li class="is-active"><a>Big O</a></li>
+                </ul>
+            </nav>
         </div>
         
         <div class="content">
-            <h1 id="title">Big O Notation</h1>
+            <section class="section">
+            <h1 class="has-text-centered pt-6" id="title">Big O Notation</h1>
+            <section class="section">
+                <div class="container">
             <h2>Difficulty <em>medium</em></h2>
             <p>Before reading, it is necessary to watch this video: 
                 <div class="iframe-container">
@@ -64,7 +75,10 @@
             </ul>
 
             <p>Let's take a look at what these different terms mean.</p>
+            </section>
             <br>
+        </div>
+        </section>
 
             <h2 id="O(1)">O(1)</h2>
 
@@ -198,5 +212,7 @@ public class test {
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
+
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
