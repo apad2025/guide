@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="/styles/iframefix.css">
 <script src="/scripts/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
     <title>Big O Notation</title>
@@ -54,8 +55,8 @@
                 <div class="container">
             <h2>Difficulty <em>medium</em></h2>
             <p>Before reading, it is necessary to watch this video: 
-                <div class="has-text-centered iframe-container">
-                    <br><br><iframe width="560" height="315" id="video" src="https://www.youtube.com/embed/__vX2sjlpXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+                <div class="has-text-centered myiframe">
+                    <br><br><iframe class="my-responsiveiframe" width="560" height="315" id="video" src="https://www.youtube.com/embed/__vX2sjlpXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
                 </div>
             <br><p id="explanation">Big O is basically a measure of an algorithim's complexity in terms of N. It has nothing to do with the hardware running the code. It can be looked at 
             in worst-case, best-case, and average-case, but you'll only be needing to learn worst-case. Two things to note about Big O are:</p>
@@ -204,7 +205,7 @@ public class test {
             </p>
 
             <div class="has-text-centered iframe-container" id="practice">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzDT_b_bmFDMFfrelPeW1j47FKoprXbi07UpjdZq6s1KrFzw/viewform?embedded=true" width="640" height="360" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfzDT_b_bmFDMFfrelPeW1j47FKoprXbi07UpjdZq6s1KrFzw/viewform" target="_blank">Practice</a>
             </section>
         </div>
         </section>
