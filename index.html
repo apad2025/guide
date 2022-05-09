@@ -8,34 +8,46 @@
     <link rel="icon" type="image/x-icon" href="/images/uil.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Compsci Guide</title>
 </head>
 <body>
-    <div class="cookie-banner" style="display: none">
-        <p>
-            By using our website, you agree to our 
-            <a href="insert-link">cookie policy</a>
-          </p>
-        <button class="close">&times;</button>
+    <nav class="navbar has-shadow is-white">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="/images/uil.ico" alt="UIL logo" style="max-height: 70px" class="py-2 px-2">
+            </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
-    <div class="body">
-        <ul class="navbar">
-            <div class="title">
-                <li>
-                    <a href="/">Home</a>
-                </li>
+
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <a href="/concepts/" class="navbar-item">Concepts</a>
             </div>
-            <div>
-                <li><a href="/concepts">Concepts</a></li>
-            </div>
-        </ul>
+        </div>
+    </nav>
+
+    
+    <div class="section pt-4 pb-0">
+        <nav class="breadcrumb">
+            <ul class="container">
+                <li class="is-active"><a>Home</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="content">
+        
     
     
 
     
-        <h1>Welcome to the Computer Science UIL Guide</h1>
-        <div class="centerme"><a href="/concepts/" class="button">Get started</a></div>
+        <h1 class="has-text-centered p-6">Welcome to the Computer Science UIL Guide</h1>
+        <div class="has-text-centered"><a href="/concepts/" class="button">Get started</a></div>
     </div>
 </body>
 </html>
