@@ -1,0 +1,127 @@
+/*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+background color:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/
+
+pre {
+  overflow-x: auto;
+  margin: 20px;
+  padding: 20px;
+  border-color: #e3e6e9;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.hljs,
+.hljs-operator {
+  color: #383A42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #A0A1A7;
+  background: #fafafa;
+  font-style: italic;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-template-variable,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst,
+.hljs-attr,
+.hljs-class {
+  background: #fafafa;
+  color: #E45649;
+}
+
+
+
+.hljs-string,
+.hljs-regexp,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  background: #fafafa;
+  color: #50A14F;
+}
+
+
+.hljs-start,
+.hljs-args {
+  color: #E45649;
+  background: #fafafa;
+  font-style: italic;
+}
+
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number,
+.hljs-literal,
+.hljs-variable {
+  background: #fafafa;
+  color: #986801;
+}
+
+.hljs-import,
+.hljs-meta,
+.hljs-object,
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-title {
+  color: #ad7d24;
+  background: #fafafa;
+}
+
+
+.hljs-method,
+.hljs-title,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-selector-id {
+  background: #fafafa;
+  color: #4078F2;
+}
+
+.hljs-emphasis {
+  background: #fafafa;
+  font-style: italic;
+}
+
+.hljs-strong {
+  background: #fafafa;
+  font-weight: bold;
+}
+
+.hljs-link {
+  background: #fafafa;
+  text-decoration: underline;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula,
+.hljs-type {
+  background: #fafafa;
+  color: #A626A4;
+}
