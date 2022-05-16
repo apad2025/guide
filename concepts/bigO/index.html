@@ -65,7 +65,7 @@
                 <li>Higher order terms take precedence over lower terms. The highest order term is the complexity of the code.
                     <ul>
                         <li>O(n!)</li>
-                        <li>O(2ⁿ)</li>
+                        <li>O(Xⁿ)</li>
                         <li>O(nˣ)</li>
                         <li>O(nlogn)</li>
                         <li>O(n)</li>
@@ -79,7 +79,14 @@
             
 
             
-            <h2 id="O(1)">O(1)</h2>
+            <h2 id="O(1)" class="bd-anchor-title">
+                <span class="bd-anchor-name">
+                    O(1)
+                </span>
+                <a class="bd-anchor-link" href="#O(1)">
+                    #
+                </a>
+            </h2>
 
             <p>O(1), or constant complexity, means that the program has a constant time regardless of the data set size. They are efficient with any data set.
             Take this code for example:</p>
@@ -91,7 +98,14 @@ System.out.println(i);</code></pre>
             
             <br>
             
-            <h2 id="O(logn)">O(logn)</h2>
+            <h2 id="O(logn)" class="bd-anchor-title">
+                <span class="bd-anchor-name">
+                    O(logn)
+                </span>
+                <a class="bd-anchor-link" href="#O(logn)">
+                    #
+                </a>
+            </h2>
 
             <p>O(logn), or logarithmic complexity, means that the amount of data an algorithm has is halved each time it runs, or passes. They are efficient with large data sets.
             This can be very easily visualized with a binary search tree.</p>
@@ -126,7 +140,14 @@ public class test{
             </p>
             <br>
 
-            <h2 id="O(n)">O(n)</h2>
+            <h2 id="O(n)" class="bd-anchor-title">
+                <span class="bd-anchor-name">
+                    O(n)
+                </span>
+                <a class="bd-anchor-link" href="#O(n)">
+                    #
+                </a>
+            </h2>
 
             <p>O(n), or linear complexity, means that the complexity of your code is directly proportional to the size of your input. Take this code for example:</p>
             
@@ -149,7 +170,14 @@ public class test {
             </p>
             <br>
 
-            <h2 id="O(nlogn)">O(nlogn)</h2>
+            <h2 id="O(nlogn)" class="bd-anchor-title">
+                <span class="bd-anchor-name">
+                    O(nlogn)
+                </span>
+                <a class="bd-anchor-link" href="#O(nlogn)">
+                    #
+                </a>
+            </h2>
 
             <p>O(nlogn), or loglinear complexity, means that your program has logn complexity n times. Notice how the word loglinear is just log and linear put together. This is because
                 O(nlogn) is essentially the blending of O(n) and O(logn). Let's take a look
@@ -180,7 +208,14 @@ public class test {
             </p>
             <br>
 
-            <h2 id="O(n^x)">O(nˣ)</h2>
+            <h2 id="O(n^x)" class="bd-anchor-title">
+                <span class="bd-anchor-name">
+                    O(nˣ)
+                </span>
+                <a class="bd-anchor-link" href="#O(n^x)">
+                    #
+                </a>
+            </h2>
 
             <p>O(nˣ), or polynomial complexity, means that your code will run through all of n for every n x number of times.
                 X represents the number of times all of n will be processed for every n. Take this code for example:
@@ -204,6 +239,47 @@ public class test {
                 rather than take the highest order term. This means this program has a complexity of O(n²), which is really O(nˣ) since we drop constants.
             </p>
 
+            <h2 id="O(X^n)" class="bd-anchor-title">
+                <span class="bd-anchor-name">
+                    O(Xⁿ)
+                </span>
+                <a class="bd-anchor-link" href="#O(X^n)">
+                    #
+                </a>
+            </h2>
+
+            <p>O(Xⁿ), also known as exponential time, means that your input will be the exponent to another number. If you take O(2ⁿ), for example,
+                your growth will double for each additional input. If you take O(3ⁿ), your growth will triple for each additional input.
+                Let's take a look at some code:
+            </p>
+
+            <pre><code>import static java.lang.System.*;
+public class test {
+    public static void main(String[] args) {
+        double n = 4.0;
+        out.println(fib(n));
+    }
+    public static double fib(double n) {
+        if (n == 0) { //base case
+            return n;
+        }
+        if (n == 1) { //base case 2
+            return 1;
+        }
+        return fib(n - 1) + fib(n - 2);
+    }
+}</code></pre>
+
+            <p>This code has a time complexity of O(2ⁿ) because every time the input increments, the growth doubles. Now let's look at this graph
+                to better visualize what's happening in the code above.
+            </p>
+            <img src="/images/chart.png" alt="Chart">
+
+            <p>When the code is first run, 4 is passed over into the fib() method. In level 1, the method calls itself twice with fib(3) and fib(2).
+                In level 2, the method calls itself 4 times. In Level 3, the method is called 8 times. As the input increments (going from 4 to 3 to 2 to 1),
+                the number of calls increases exponentially, giving this code a complexity of O(2ⁿ), or O(Xⁿ).
+            </p>
+
             <div class="has-text-centered iframe-container" id="practice">
                 <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfzDT_b_bmFDMFfrelPeW1j47FKoprXbi07UpjdZq6s1KrFzw/viewform" target="_blank">Practice</a>
             </section>
@@ -212,8 +288,8 @@ public class test {
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script> -->
 
     <script src="https://cdn.jsdelivr.net/gh/apad2025/guide@main/scripts/index.js"></script>
 </body>
