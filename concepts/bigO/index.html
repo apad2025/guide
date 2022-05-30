@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apad2025/guide@main/styles/atom-one-light.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/apad2025/guide@main/styles/iframefix.css">
+<link rel="stylesheet" href="/styles/special.css">
 <script src="https://cdn.jsdelivr.net/gh/apad2025/guide@main/scripts/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
     <title>Big O Notation</title>
@@ -20,7 +21,7 @@
         
         <nav class="navbar has-shadow is-white">
             <div class="navbar-brand">
-                <a class="navbar-item">
+                <a class="navbar-item" href="/">
                     <img src="/images/uil.ico" alt="UIL logo" style="max-height: 70px" class="py-2 px-2">
                 </a>
                 <a class="navbar-burger" id="burger">
@@ -50,15 +51,15 @@
         
         <div class="content">
             <section class="section">
-            <h1 class="has-text-centered pt-6" id="title">Big O Notation</h1>
-            <section class="section">
                 <div class="container">
+            <h1 class="has-text-centered p-4" id="title">Big O Notation</h1>
             <h2>Difficulty <em>medium</em></h2>
             <p>Before reading, it is necessary to watch this video: 
                 <div class="has-text-centered myiframe">
                     <br><br><iframe class="my-responsiveiframe" width="560" height="315" id="video" src="https://www.youtube.com/embed/__vX2sjlpXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
                 </div>
-            <br><p id="explanation">Big O is basically a measure of an algorithim's complexity in terms of N. It has nothing to do with the hardware running the code. It can be looked at 
+            <br><p id="explanation"><span class="definition">Big O is the categorizing of programs based on something called <em>time complexity</em>. Big O Notation gives a rough idea of how long it will take an algorithm to execute based on two things: the size of the input it has and the amount of steps it takes to complete.</span>
+                It has nothing to do with the hardware running the code. It can be looked at 
             in worst-case, best-case, and average-case, but you'll only be needing to learn worst-case. Two things to note about Big O are:</p>
             <ul>
                 <li>Big O ignores constants. For instance, 5n is written as O(n)</li>
@@ -279,6 +280,17 @@ public class test {
                 In level 2, the method calls itself 4 times. In Level 3, the method is called 8 times. As the input increments (going from 4 to 3 to 2 to 1),
                 the number of calls increases exponentially, giving this code a complexity of O(2ⁿ), or O(Xⁿ).
             </p>
+
+            <h2 id="O(n!)" class="bd-anchor-title">
+                <span class="bd-anchor-name">
+                    O(n!)
+                </span>
+                <a class="bd-anchor-link" href="#O(n!)">
+                    #
+                </a>
+            </h2>
+
+            <p>O(n!), or </p>
 
             <div class="has-text-centered iframe-container" id="practice">
                 <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfzDT_b_bmFDMFfrelPeW1j47FKoprXbi07UpjdZq6s1KrFzw/viewform" target="_blank">Practice</a>
