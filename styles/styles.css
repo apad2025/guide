@@ -1,198 +1,105 @@
-* {
-    background: #1d2a35;
-    font-family: monaco,Consolas,Lucida Console,monospace;
-    color: #cdcdcd;
-    line-height: 30px;
-    box-sizing: border-box;
+/*
+Color Palette:
+    Light Mode:
+        Text: #222222
+        Background: ebebeb
+
+*/
+@font-face {
+    font-family: 'SF Pro';
+    src: url(/fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+@font-face {
+    font-family: 'SF Pro Medium';
+    src: url(/fonts/SFPRODISPLAYMEDIUM.OTF);
+}
+
+/* Light Mode */
+:root[color-mode="light"] {
+    --textColor: #222222;
+    --backgroundColor: #ebebeb;
+    --buttonFill: #639FAB;
+}
+
+/* Dark Mode */
+:root[color-mode="dark"] {
+    --textColor: #EBEBEB;
+    --backgroundColor: #222222;
+    --buttonFill: #1C5D99;
+}
+
+html {
     scroll-behavior: smooth;
+    font-family: 'SF Pro';
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
+    line-height: 10%;
+    box-sizing: border-box;
 }
 
-.navbar {
-    width: 100%;
-    font-weight: normal;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #0d1721;
-    position: fixed;
-    top: 0;
-}
-
-.navbar li {
-    float: right;
-}
-
-.navbar a {
-    font-size: 18px;
-    background-color: #0d1721;
-    display: block;
-    color: #E8EDDF;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    color: white;
-    background-color: #000000;
-}
-
-.navbar .title {
-    float: left;
-}
-
-.navbar .title a {
-    background-color: #04aa6d;
-}
-
-.button {
-    background: #0b860f; /* Green */
-    padding: 20px;
-    width: 150px;
-    margin: auto;
-    text-align: center;
-}
-
-.button a {
-    font-size: 100%;
-    background: #0b860f;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-button {
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-}
-
-h2,
-p {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
 
 body {
     margin: 0px;
-    width: 100vw;
-    height: 100vh;
 }
 
-.sidenav {
-    float: left;
-    background: #464646;
-    width: 15%;
-    height: 100%;
+.home {
+    text-align: center;
+    margin: 20px;
+}
+
+.home * {
+    margin: 20px;
+}
+
+.home h1 {
+    font-size: 40px;
     padding: 10px;
 }
 
-.sidenav * {
-    background: #464646;
-    /*list-style: none;*/
+.home .logo {
+    width: auto;
+    height: 150px;
+}
+
+.home .button { 
+    font-size: 20px;
+}
+
+.button {
+    display: inline-block;
+    width: auto;
     text-decoration: none;
+    color: var(--backgroundColor);
+    border-radius: 25px;
+    background-color: var(--buttonFill);
+    padding: 1%;
 }
 
-.body {
-    padding-top: 60px;
-    width: 100vw;
-    height: 100%;
-    /*
-    overflow-y: auto;
-    float: left;
-    width: 85%;
-    height: 100%;
-    margin: 30px;
-    margin-bottom: 10px;*/
-}
-
-.content {
-    padding: 30px;
-    overflow-y: auto;
-    float: left;
-    width: 85%;
-    height: 100%;
-}
-
-
-
-.centerme {
-    margin: auto;
-    width: 50%;
-    padding: 30px;
+.button a {
     text-align: center;
+    text-decoration: none;
+    color: var(--backgroundColor);
+    border-radius: 25px;
+    background-color: var(--buttonFill);
+    padding: 1%;
 }
 
-.centerme .mybutton {
-    cursor: pointer;
-    padding: 20px;
-    background: #0b860f;
-    background-color: #0b860f;
-    justify-content: center;
-    text-align: center;
-}
-
-    .iframe-container {
-        margin: auto;
-        width: 44%;
-    }
-
-@media only screen and (max-width: 1000px) {
-    .iframe-container {
-        margin: auto;
-        width: 100%;
-    }
-    .sidebar {
-        display: none;
-    }
-    .content {
-        width: 100%;
-    }
-}
-
-.iframe-container iframe {
+/* iframe fix here*/
+.myiframe {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    border-style:ridge;
-    border-color: #04aa6d;
-    border-width: 20px;
+    /* padding-top: 56.25%; 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
-.responsive {
+/* Then style the iframe to fit in the container div with full height and width */
+.my-responviveiframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    height: auto;
-}
-
-.sidebar {
-    margin: 0;
-    float: left;
-    background: #15202b;
-    width: 15%;
     height: 100%;
-    padding: 10px;
-}
-
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 16px;
-    background-color: #15202b;
-    text-decoration: none;
-}
-
-.sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-.sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-
-.sidebar * {
-    background: #464646;
-    /*list-style: none;*/
-    text-decoration: none;
 }
